@@ -10,8 +10,8 @@ jobs:
         uses: sedinqa/sedstart@v1
         with:
           api_key: ${{ secrets.SEDSTART_API_KEY_PROD }}
-          project_id: 1274
-          test_id: 11987
-          profile_id: 2238
+          project_id: 1296
+          test_id: 1085
+          profile_id: 2307
           browser: chrome
           headless: false
