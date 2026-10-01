@@ -1,13 +1,17 @@
-name: Sedstart Prod
- 
+name: Sedstart Local Windows
+
 on:
   workflow_dispatch:
+
 jobs:
   sedstart-run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
+      - name: Install Playwright
+        run: npm install -g playwright@1.52.0
+
       - name: Trigger SedStart test run
-        uses: sedinqa/sedstart@v1
+        uses: sedstart/runlocal@v1
         with:
           api_key: ${{ secrets.SEDSTART_API_KEY_PROD }}
           project_id: 1296
